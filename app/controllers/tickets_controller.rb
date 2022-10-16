@@ -4,6 +4,8 @@ class TicketsController < ApplicationController
         ticket = Ticket.create(ticket_params)
         render json: ticket, status: :created
     end 
+
+    
     private
 
     def ticket_params
