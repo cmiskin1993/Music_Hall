@@ -1,5 +1,6 @@
 import React, {useState} from 'react'
 import {useNavigate} from 'react-router-dom'
+import '/Users/cnestel-admin/Desktop/Flatiron-Projects/phase-4-project/Music_Hall/client/src/Sessions/Form.css'
 
 const Signup = () => {
     const [formData, setFormData] = useState({
@@ -43,7 +44,7 @@ const Signup = () => {
     }
     return (
         <> 
-        <form onSubmit={onSubmit}>
+        <form className='form-container' onSubmit={onSubmit}>
             <label> First Name </label>  
             <input type='text' name='name' value={name} onChange={handleChange} />
         

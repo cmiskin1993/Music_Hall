@@ -5,6 +5,11 @@ class TicketsController < ApplicationController
         render json: ticket, status: :created
     end 
 
+    # def show
+    #     ticket = Ticket.find(params[:id])
+    #     render json: ticket, status: :ok
+    # end 
+
     
     private
 

@@ -30,7 +30,7 @@ class ConcertsController < ApplicationController
     private
     
     def concert_params
-        params.permit(:title, :artist, :description, :image)
+        params.permit(:title, :artist, :description, :image, :price)
     end 
 
 end

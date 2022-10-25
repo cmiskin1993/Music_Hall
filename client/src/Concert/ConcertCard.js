@@ -1,18 +1,20 @@
-import {Link} from 'react-router-dom'
+import {NavLink} from 'react-router-dom'
+import '/Users/cnestel-admin/Desktop/Flatiron-Projects/phase-4-project/Music_Hall/client/src/Concert/Style/ConcertCard.css'
 
 
 const ConcertCard = ({concert}) => {
-    const {title, artist, image, id} = concert
+  
+    const {artist, image, id, price} = concert
     console.log(concert)
 
 
     return (
-      <div className='card'>
-      <div>
-      <Link to={`/concerts/${id}`}> <h2>{title}</h2></Link>
-        <p>{artist}</p>
-      </div>
-      <img src={image} alt="concert-img"/>
+      <div className='grid-container'>
+        <li className="card">
+          <img src={image} className="top-card" alt="concert-img"/>
+            <NavLink to={`/concerts/${id}`}> <h2>{artist}</h2> </NavLink>
+            <h3> Ticket Price: ${price}</h3>
+        </li>
       </div>
      
     );

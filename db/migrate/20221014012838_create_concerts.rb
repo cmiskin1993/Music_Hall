@@ -5,6 +5,7 @@ class CreateConcerts < ActiveRecord::Migration[6.1]
         t.text :description
         t.string :image
         t.string :artist
+        t.float :price
 
 
 

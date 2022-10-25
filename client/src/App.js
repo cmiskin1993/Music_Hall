@@ -8,6 +8,9 @@ import Login from './Sessions/Login/Login'
 import Signup from './Sessions/Signup/Signup'
 import User from './Profile/User'
 import ConcertContainer from './Concert/ConcertContainer'
+import ConcertForm from './Concert/ConcertForm'
+import EditConcert from './Concert/EditConcert'
+import ConcertDetail from './Concert/ConcertDetails'
 
 
 
@@ -49,7 +52,7 @@ const App = () => {
   const updateConcert = (updatedConcert) => setConcerts(current => {
     return current.map(concert => {
      if(concert.id === updateConcert.id){
-       return updateConcert
+       return updatedConcert
      } else {
        return concert
      }
@@ -74,7 +77,10 @@ const App = () => {
           <Route path="/login" element={ <Login updateUser={updateUser} /> } />
           <Route path="/signup" element={ <Signup /> } />
           <Route path="/users/:id" element={ <User updateUser={updateUser} /> } />
-          <Route path="/concerts" element = {<ConcertContainer />} />
+          <Route path="/concerts" element = {<ConcertContainer concerts={concerts} />} />
+          <Route path="/new/concert" element = {<ConcertForm addConcert={addConcert} />} />
+          <Route path="/concerts/:id/edit" element = {<EditConcert updateConcert={updateConcert} concerts={concerts} />} />
+          <Route path="/concerts/:id" element = {<ConcertDetail deleteConcert={deleteConcert} />} />
           </Routes>
       </Router>
 

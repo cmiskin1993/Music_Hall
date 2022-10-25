@@ -20,6 +20,7 @@ ActiveRecord::Schema.define(version: 2022_10_14_013711) do
     t.text "description"
     t.string "image"
     t.string "artist"
+    t.float "price"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

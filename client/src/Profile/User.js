@@ -17,6 +17,7 @@ const User = () => {
                 res.json().then(user => {
                     setUser(user)
                     setLoading(false)
+                    console.log(user)
                 })
             }else {
                 res.json().then(data => setErrors(data.error))
@@ -34,8 +35,7 @@ const User = () => {
             <ul>
                 {user.tickets?.map(ticket => (
                 <li>
-                    <h2>{ticket.concert.title}</h2>
-                    <p>Price: {ticket.price}</p>
+                    <h2>{ticket.concert.artist}</h2>
                 </li>
                 ))}
             </ul>

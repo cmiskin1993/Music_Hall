@@ -5,14 +5,15 @@ class ApplicationController < ActionController::API
     rescue_from ActiveRecord::RecordInvalid, with: :render_unprocessable_entity
     rescue_from ActiveRecord::RecordNotFound, with: :render_not_found
 
+
     private
-    
+
     def authenticated_user
         render json: {errors: "Please login"}, status: :unauthorized unless current_user 
     end
 
     def is_authorized?
-        permitted = current_user.admin? 
+        permitted = current_user 
         render json: {errors: "Not permitted"}, status: :forbidden unless permitted 
     end 
 
