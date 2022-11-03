@@ -56,7 +56,7 @@ const Signup = () => {
             
             <input type='submit' value='Sign up!' />
         </form>
-        {errors? errors.map(error => <div> {error[0]} {error[1]} </div>) :null}
+        <h2>{errors? errors.map(error => <div> {error[0]} {error[1]} </div>) :null}</h2>
         </>
     )
 }

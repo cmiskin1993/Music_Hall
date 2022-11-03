@@ -8,7 +8,7 @@ class SessionsController < ApplicationController
       session[:user_id] = user.id
       render json: user, status: :ok
     else 
-      render json: "Invalid Credentials", status: :unauthorized
+      render json: {errors: "Incorrect username or password"}, status: :not_found
     end
 
   end

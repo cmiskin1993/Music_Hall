@@ -1,26 +1,26 @@
 import { useState } from 'react'
-import {NavLink} from 'react-router-dom'
+import {NavLink, useNavigate} from 'react-router-dom'
 import { FiMenu } from "react-icons/fi";
 import { AiOutlineClose } from "react-icons/ai";
 import '../Navigation/Navbar.css'
 
 
-const Navbar = ({currentUser}) => {
+const Navbar = ({ currentUser, updateUser }) => {
 
-  // const [menu, setMenu] = useState(false)
   const [navbarOpen, setNavbarOpen] = useState(false)
+
+  const navigate = useNavigate()
+
 
 
   const handleLogOut = () => {
-    fetch(`/logout`, {
-      method:"DELETE"
+    fetch('/logout',{
+      method: "DELETE"
     })
-    .then(res =>{
-      if(res.ok){
-        currentUser(false)
-      }
-    })
+    updateUser("")
+        navigate("/")
   }
+
 
   const handleToggle = () => {
     setNavbarOpen(!navbarOpen)
@@ -42,7 +42,7 @@ const Navbar = ({currentUser}) => {
           </button>
           <ul className={`menuNav ${navbarOpen ? " showMenu" : ""}`}>
           <NavLink to="/" id="logo" className="active-link" onClick={() => closeMenu()} >Home</NavLink>
-            <li><NavLink to='/users/1' className="active-link" onClick={() => closeMenu()}>User Page</NavLink></li>
+            <li>{currentUser ? <NavLink to={`/users/${currentUser.id}`}>My Account</NavLink> : null }</li>
             <li><NavLink to='/signup' className="active-link" onClick={() => closeMenu()}>Sign Up</NavLink></li>
             <li><NavLink to='/login' className="active-link" onClick={() => closeMenu()}>Login</NavLink></li>
             <li><NavLink to='/concerts' className="active-link" onClick={() => closeMenu()}>Concerts</NavLink></li>

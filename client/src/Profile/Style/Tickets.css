@@ -1,0 +1,40 @@
+
+  .ticket-card {
+    width: 400px;
+    overflow: hidden;
+    box-shadow: -4px -4px 20px rgba(0, 0, 0, 0.505);
+    margin: 1rem;
+    margin-left: 35%;
+  
+    padding: 20px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3);
+    transition: 0.3s;
+    text-align: center;
+    background-color: rgb(21, 21, 21);
+    border: 3px solid #d9d9d9;
+    border-radius: 4px; 
+  } 
+  h1{
+    font-size: 40px;
+    color: rgb(0, 0, 0);
+    margin: 12px 0;
+    text-align: center;
+  } 
+  h2{
+    font-size: 40px;
+    color: rgb(255, 255, 255);
+    margin: 12px 0;
+    text-align: center;
+  }
+  h3{
+    font-size: 30px;
+    color: rgb(255, 255, 255);
+    margin: 12px 0;
+    text-align: center;
+  }
+  .top-card {
+    width: 100%;
+  }  
+  .top-card img {
+    width: 100%;
+  }

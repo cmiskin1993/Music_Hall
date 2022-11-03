@@ -21,7 +21,6 @@ const onSubmit = (e) =>{
         name,
         password
     }
-    console.log(user)
     fetch(`/login`,{
         method:'POST',
         headers:{'Content-Type': 'application/json'},
@@ -57,7 +56,8 @@ return (
     
     <input type='submit' value='Log in!' />
     </form>
-    {errors? <div>{errors}</div>:null}
+    <h2>{errors? <div>{errors}</div>:null} </h2>
+
     </>
 )
 }

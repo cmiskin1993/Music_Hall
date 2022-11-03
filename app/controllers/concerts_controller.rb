@@ -1,5 +1,5 @@
 class ConcertsController < ApplicationController
-    before_action :is_authorized?, only: [:create, :update, :destroy, :show]
+    before_action :is_authorized?, only: [:create, :update, :destroy]
     
     def index 
         render json: Concert.all, status: :ok
@@ -30,7 +30,7 @@ class ConcertsController < ApplicationController
     private
     
     def concert_params
-        params.permit(:title, :artist, :description, :image, :price)
+        params.permit(:title, :artist, :description, :image, :price, :id, :created_at, :updated_at, :concert)
     end 
 
 end

@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   # Routing logic: fallback requests for React Router.
   # Leave this here to help deploy your app later!
 
-  resources :tickets, only: [:show, :create]
+  resources :tickets, only: [:index, :create, :show]
   resources :users, only: [:show, :create]
   resources :concerts, only: [:index, :create, :show, :update, :destroy]
 

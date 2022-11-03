@@ -4,6 +4,6 @@ class TicketSerializer < ActiveModel::Serializer
     has_one :user
   
     def concert
-      {title:object.concert.title}
+      {title:object.concert.title, artist:object.concert.artist}
     end 
   end

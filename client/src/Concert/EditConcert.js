@@ -1,8 +1,13 @@
 import React, { useState, useEffect} from 'react'
 import { useParams } from 'react-router-dom'
 import '/Users/cnestel-admin/Desktop/Flatiron-Projects/phase-4-project/Music_Hall/client/src/Concert/Style/ConcertPage.css'
+import { useNavigate } from 'react-router-dom';
+
 
     const EditConcert = ({updateConcert}) => {
+
+    const navigate = useNavigate()
+
 
         
     const [formData, setFormData] = useState({
@@ -36,6 +41,7 @@ import '/Users/cnestel-admin/Desktop/Flatiron-Projects/phase-4-project/Music_Hal
     .then(res => {
         if(res.ok){
         res.json().then(updateConcert)
+        navigate("/concerts")
         } else {
         res.json().then(data => setErrors(Object.entries(data.errors).map(e => `${e[0]} ${e[1]}`)))
         }

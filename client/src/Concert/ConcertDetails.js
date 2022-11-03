@@ -8,6 +8,8 @@ const ConcertDetail = ({deleteConcert}) => {
   const [concert, setConcert] = useState({})
   const [loading, setLoading] = useState(true)
   const [errors, setErrors] = useState(false)
+
+  
   
   const params = useParams()
   const navigate = useNavigate()
@@ -47,11 +49,11 @@ const ConcertDetail = ({deleteConcert}) => {
     fetch(`/tickets`,{
       method:'POST',
       headers: {'Content-Type': 'application/json'},
-      body:JSON.stringify({concert_id:id, user_id:1, price:30.50})
+      body:JSON.stringify({concert_id:id, user_id:1, price:''})
     })
     .then(res => {
       if(res.ok){
-        navigate('/users/1')
+        navigate(`/users/${id}`)
       } else {
         res.json().then(data => setErrors(Object.entries(data.errors).map(e => `${e[0]} ${e[1]}`)))
       }
@@ -59,8 +61,7 @@ const ConcertDetail = ({deleteConcert}) => {
   }
 
   
-  
- 
+
   if(loading) return <h1>Loading</h1>
   if(errors) return <h1>{errors}</h1>
 

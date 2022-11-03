@@ -21,7 +21,6 @@ const App = () => {
   const [currentUser, setCurrentUser] = useState(false)
 
 
-
   useEffect(() => {
     fetch("/authorized_user")
     .then((res) => {
@@ -30,7 +29,6 @@ const App = () => {
         .then((user) => {
           updateUser(user);
           fetchConcerts()
-          console.log(user)
         });
       }
     })
@@ -71,7 +69,7 @@ const App = () => {
   return (
     <div className='global-style'>
     <Router>
-    <Navbar currentUser={currentUser} />
+    <Navbar currentUser={currentUser} updateUser={updateUser} />
         <Routes>
           <Route path="/" element = {<Home concerts={concerts} />} />
           <Route path="/login" element={ <Login updateUser={updateUser} /> } />
