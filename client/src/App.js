@@ -13,6 +13,8 @@ import ConcertForm from './Concert/ConcertForm'
 import EditConcert from './Concert/EditConcert'
 import ConcertDetail from './Concert/ConcertDetails'
 
+import PageNotFound from './Errors/PageNotFound'
+
 
 
 const App = () => {
@@ -81,7 +83,9 @@ const App = () => {
           <Route path="/concerts" element = {<ConcertContainer concerts={concerts} />} />
           <Route path="/new/concert" element = {<ConcertForm addConcert={addConcert} />} />
           <Route path="/concerts/:id/edit" element = {<EditConcert updateConcert={updateConcert} concerts={concerts} />} />
-          <Route path="/concerts/:id" element = {<ConcertDetail deleteConcert={deleteConcert} />} />
+          <Route path="/concerts/:id" element = {<ConcertDetail deleteConcert={deleteConcert} currentUser={currentUser} />} />
+          
+          <Route path="*" element={<PageNotFound />} />
           </Routes>
       </Router>
 

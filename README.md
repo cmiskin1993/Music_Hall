@@ -16,7 +16,6 @@ My ticket poster app is something similar to ticketmater where you can post tick
 
 - fork and clone repository into your own GitHub
 - bundle install
-- rails db:create
 - npm install --prefix client
 
 You can now run the application: 

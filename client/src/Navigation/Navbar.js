@@ -44,7 +44,7 @@ const Navbar = ({ currentUser, updateUser }) => {
             <NavLink to="/" id="logo" className="active-link" onClick={() => closeMenu()} >Home</NavLink>
               <li>{currentUser ? <NavLink to={`/users/${currentUser.id}`}>My Account</NavLink> : null }</li>
               <li>{currentUser ? <NavLink to='/concerts' className="active-link" onClick={() => closeMenu()}>Concerts</NavLink>: null }</li>
-              <li> {currentUser ? <NavLink to='/new/concert' className="active-link" onClick={() => closeMenu()}>Add Concert</NavLink>: null }</li>
+              <li>{currentUser ? <NavLink to='/new/concert' className="active-link" onClick={() => closeMenu()}>Add Concert</NavLink>: null }</li>
               <li><NavLink to='/signup' className="active-link" onClick={() => closeMenu()}>Sign Up</NavLink></li>
               <li><NavLink to='/login' className="active-link" onClick={() => closeMenu()}>Login</NavLink></li>
           </ul>

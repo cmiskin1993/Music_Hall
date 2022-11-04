@@ -12,6 +12,7 @@ class ApplicationController < ActionController::API
         render json: {errors: "Please login"}, status: :unauthorized unless current_user 
     end
 
+
     def is_authorized?
         permitted = current_user 
         render json: {errors: "Not permitted"}, status: :forbidden unless permitted 

@@ -2,18 +2,17 @@ import  { Link, useParams, useNavigate } from 'react-router-dom'
 import {useEffect, useState} from 'react'
 import '/Users/cnestel-admin/Desktop/Flatiron-Projects/phase-4-project/Music_Hall/client/src/Concert/Style/ConcertPage.css'
 
-const ConcertDetail = ({deleteConcert}) => {
+const ConcertDetail = ({deleteConcert, currentUser}) => {
 
 
   const [concert, setConcert] = useState({})
   const [loading, setLoading] = useState(true)
   const [errors, setErrors] = useState(false)
-
-  
   
   const params = useParams()
   const navigate = useNavigate()
 
+console.log(currentUser)
 
   useEffect(()=>{
     fetch(`/concerts/${params.id}`)
@@ -45,11 +44,12 @@ const ConcertDetail = ({deleteConcert}) => {
     })
   }
 
+
   const handleBuy = () => {
     fetch(`/tickets`,{
       method:'POST',
       headers: {'Content-Type': 'application/json'},
-      body:JSON.stringify({concert_id:id, user_id:1, price:''})
+      body:JSON.stringify({concert_id: id, user_id: currentUser.id})
     })
     .then(res => {
       if(res.ok){
