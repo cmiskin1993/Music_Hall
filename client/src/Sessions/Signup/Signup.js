@@ -6,7 +6,7 @@ const Signup = () => {
     const [formData, setFormData] = useState({
         name:'',
         email:'',
-        password:''
+        password:'',
     })
     const [errors, setErrors] = useState([])
     const navigate = useNavigate()
@@ -18,7 +18,7 @@ const Signup = () => {
         const user = {
             name,
             email,
-            password
+            password,
         }
     
         fetch(`/users`,{
@@ -38,14 +38,17 @@ const Signup = () => {
 
     }
 
-    const handleChange = (e) => {
-        const { name, value } = e.target
-        setFormData({ ...formData, [name]: value })
-    }
+    const handleChange = e => {
+        setFormData({ 
+            ...formData, [e.target.name]: e.target.value
+    })
+}
+
     return (
         <> 
+        <h2>Create an Account</h2>
         <form className='form-container' onSubmit={onSubmit}>
-            <label> First Name </label>  
+            <label> Name </label>  
             <input type='text' name='name' value={name} onChange={handleChange} />
         
             <label> Email </label>

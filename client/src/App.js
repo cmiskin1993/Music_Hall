@@ -1,5 +1,6 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import {useEffect, useState} from 'react'
+import '/Users/cnestel-admin/Desktop/Flatiron-Projects/phase-4-project/Music_Hall/client/src/App.css'
 
 
 import Home from './Static/Home'
@@ -61,6 +62,8 @@ const App = () => {
 
 
   const updateUser = (user) => setCurrentUser(user)
+
+
  
   
   if(errors) return <h1>{errors}</h1>
@@ -71,7 +74,7 @@ const App = () => {
     <Router>
     <Navbar currentUser={currentUser} updateUser={updateUser} />
         <Routes>
-          <Route path="/" element = {<Home concerts={concerts} />} />
+          <Route path="/" element = {<Home />} />
           <Route path="/login" element={ <Login updateUser={updateUser} /> } />
           <Route path="/signup" element={ <Signup /> } />
           <Route path="/users/:id" element={ <User updateUser={updateUser} /> } />

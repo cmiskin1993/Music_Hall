@@ -15,10 +15,16 @@ class UsersController < ApplicationController
         render json: user, status: :ok
     end 
 
-    
+    def destroy
+        user = User.find(params[:id])
+        user.destroy
+        head :no_content 
+    end
+
+
     private 
 
     def user_params
-        params.permit(:username, :email, :password, :concerts)
+        params.permit(:name, :email, :password, :concerts, :ongoing, :concert)
     end 
 end

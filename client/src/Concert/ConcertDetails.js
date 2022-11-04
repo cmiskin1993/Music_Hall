@@ -30,7 +30,7 @@ const ConcertDetail = ({deleteConcert}) => {
     })
   },[])
 
-  function handleDelete(){
+  const handleDelete = () => {
     fetch(`/concerts/${params.id}`,{
       method:'DELETE',
       headers: {'Content-Type': 'application/json'}

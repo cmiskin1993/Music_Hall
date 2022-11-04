@@ -4,6 +4,7 @@
     overflow: hidden;
     box-shadow: -4px -4px 20px rgba(0, 0, 0, 0.505);
     margin: 1rem;
+    margin-left: 35%;
   
     padding: 20px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3);
@@ -42,4 +43,13 @@
   }  
   .top-card img {
     width: 100%;
+  }
+
+  .search{
+    margin-top: 20px;
+    width: 300px;
+    height: 40px;
+    font-size: 20px;
+    align-items: center;
+
   }

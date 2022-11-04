@@ -5,7 +5,6 @@ import '/Users/cnestel-admin/Desktop/Flatiron-Projects/phase-4-project/Music_Hal
 const ConcertCard = ({concert}) => {
   
     const {artist, image, id, price} = concert
-    console.log(concert)
 
 
     return (

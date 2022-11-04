@@ -46,6 +46,7 @@ const ConcertForm = ({addConcert}) => {
 
     return (
         <div>
+        <h2> Add your own concert</h2>
         {errors ? errors.map(e => <div>{e[0]} {e[1]}</div>):null}
 
         <form className='form-container' onSubmit={onSubmit}>

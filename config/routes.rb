@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   # Leave this here to help deploy your app later!
 
   resources :tickets, only: [:index, :create, :show]
-  resources :users, only: [:show, :create]
+  resources :users, only: [:show, :create, :destroy]
   resources :concerts, only: [:index, :create, :show, :update, :destroy]
 
   post '/login', to: 'sessions#create'

@@ -47,6 +47,7 @@ const handleChange = (e) => {
     
 return (
     <> 
+    <h2>Login</h2>
     <form className='form-container' onSubmit={onSubmit}>
     <label> Name </label>
     <input type='text' name='name' value={name} onChange={handleChange} />
