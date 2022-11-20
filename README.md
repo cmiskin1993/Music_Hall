@@ -17,6 +17,10 @@ My ticket poster app is something similar to ticketmater where you can post tick
 - fork and clone repository into your own GitHub
 - bundle install
 - npm install --prefix client
+- rails db:create (is is creating the database)
+- then run rails db:migrate 
+- you can then uncomment the seeded data that has already been created in the seeds file under /Music_Hall/db/seeds.rb and then run rails db:seed (this will add some dummy data into the database so you have a starting point)
+
 
 You can now run the application: 
 

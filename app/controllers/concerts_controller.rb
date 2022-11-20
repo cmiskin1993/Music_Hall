@@ -27,6 +27,12 @@ class ConcertsController < ApplicationController
         head :no_content 
     end 
 
+    def search
+        binding.pry
+        concert = Concert.find_by(description)
+        render json concert
+    end
+
     private
     
     def concert_params
