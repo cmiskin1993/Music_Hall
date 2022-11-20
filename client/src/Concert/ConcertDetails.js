@@ -1,6 +1,6 @@
 import  { Link, useParams, useNavigate } from 'react-router-dom'
 import {useEffect, useState} from 'react'
-import '/Users/cnestel-admin/Desktop/Flatiron-Projects/phase-4-project/Music_Hall/client/src/Concert/Style/ConcertPage.css'
+import '../Concert/Style/ConcertPage.css'
 
 const ConcertDetail = ({deleteConcert, currentUser}) => {
 

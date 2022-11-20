@@ -1,7 +1,8 @@
 import { useState } from 'react';
 import ConcertCard from '../Concert/ConcertCard'
-import '/Users/cnestel-admin/Desktop/Flatiron-Projects/phase-4-project/Music_Hall/client/src/Concert/Style/ConcertCard.css'
 import { AiOutlineSearch } from "react-icons/ai";
+import '../Concert/Style/ConcertPage.css'
+
 
 
 const ConcertContainer = ({concerts}) => {

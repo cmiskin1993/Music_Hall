@@ -1,6 +1,6 @@
 import React, {useState} from 'react'
 import {useNavigate} from 'react-router-dom'
-import '/Users/cnestel-admin/Desktop/Flatiron-Projects/phase-4-project/Music_Hall/client/src/Sessions/Form.css'
+import '../Form.css'
 
 const Signup = () => {
     const [formData, setFormData] = useState({

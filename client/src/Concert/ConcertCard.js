@@ -1,5 +1,5 @@
 import {NavLink} from 'react-router-dom'
-import '/Users/cnestel-admin/Desktop/Flatiron-Projects/phase-4-project/Music_Hall/client/src/Concert/Style/ConcertCard.css'
+import './Style/ConcertCard.css'
 
 
 const ConcertCard = ({concert}) => {

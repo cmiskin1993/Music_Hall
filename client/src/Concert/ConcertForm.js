@@ -1,5 +1,5 @@
 import React, { useState} from 'react'
-import '/Users/cnestel-admin/Desktop/Flatiron-Projects/phase-4-project/Music_Hall/client/src/Sessions/Form.css'
+import '../Sessions/Form.css'
 import { useNavigate } from 'react-router-dom';
 
 

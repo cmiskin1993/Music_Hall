@@ -1,6 +1,6 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import {useEffect, useState} from 'react'
-import '/Users/cnestel-admin/Desktop/Flatiron-Projects/phase-4-project/Music_Hall/client/src/App.css'
+import '../src/App.css'
 
 
 import Home from './Static/Home'

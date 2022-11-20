@@ -1,7 +1,7 @@
 import React, { useState, useEffect} from 'react'
 import { useParams } from 'react-router-dom'
-import '/Users/cnestel-admin/Desktop/Flatiron-Projects/phase-4-project/Music_Hall/client/src/Concert/Style/ConcertPage.css'
 import { useNavigate } from 'react-router-dom';
+import '../Concert/Style/ConcertPage.css'
 
 
     const EditConcert = ({updateConcert}) => {

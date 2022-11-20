@@ -1,7 +1,6 @@
 import { useEffect, useState } from 'react'
 import {useParams, useNavigate} from 'react-router-dom'
-import "/Users/cnestel-admin/Desktop/Flatiron-Projects/phase-4-project/Music_Hall/client/src/Profile/Style/Tickets.css"
-
+import '../Profile/Style/Tickets.css'
 
 const User = () => {
     const [user, setUser] = useState()
