@@ -26,7 +26,7 @@ const ConcertForm = ({addConcert}) => {
 
   const onSubmit = (e) => {
     e.preventDefault()
-    
+    debugger
     fetch('/concerts',{
         method:'POST',
         headers: {'Content-Type': 'application/json'},

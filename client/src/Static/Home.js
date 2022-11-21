@@ -1,5 +1,5 @@
-import HomeVideo from '/Users/cnestel-admin/Desktop/Flatiron-Projects/phase-4-project/Music_Hall/client/src/assets/Concert - 1630.mp4'
-import '/Users/cnestel-admin/Desktop/Flatiron-Projects/phase-4-project/Music_Hall/client/src/Static/Home.css'
+import HomeVideo from '../assets/Concert - 1630.mp4'
+import '../Static/Home.css'
 
 
 const Home = () =>{
