@@ -12,15 +12,15 @@ class ApplicationController < ActionController::API
         render json: {errors: "Please login"}, status: :unauthorized unless current_user 
     end
 
+    def current_user
+        @current_user ||= User.find_by_id(session[:user_id])
+    end 
 
     def is_authorized?
         permitted = current_user 
         render json: {errors: "Not permitted"}, status: :forbidden unless permitted 
     end 
 
-    def current_user
-        @current_user ||= User.find_by_id(session[:user_id])
-    end 
 
     def render_unprocessable_entity(invalid)
         render json: {errors: invalid.record.errors}, status: :unprocessable_entity
